@@ -1,0 +1,25 @@
+name: tts
+version: 0.1.0
+description: Text-to-speech via OpenAI-compatible provider
+author: AnotherMe
+entrypoint: plugin
+capabilities:
+  - routes
+  - ui
+dependencies: []
+ui:
+  icon: speaker
+  order: 999
+  component: true
+settings:
+  - key: model
+    label: "TTS model"
+    type: text
+    default: "tts-1"
+    description: "TTS model name"
+  - key: voice
+    label: "Voice"
+    type: select
+    default: "alloy"
+    options: ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
+    description: "Voice for text-to-speech"
