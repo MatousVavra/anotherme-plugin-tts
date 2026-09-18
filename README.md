@@ -15,7 +15,14 @@ history lives there.
 | `TTS_MODEL` | `tts-1` | TTS model name |
 
 Settings (`model`, `voice`) are configurable per-install via the plugin
-settings UI.
+settings UI and take precedence over the request defaults; `TTS_MODEL` is
+the env fallback for the model.
+
+The frontend exposes `AM.tts` with `speak(text, voice?)`, `stop()`,
+`setVoice(voice)` / `getVoice()` (persisted in `localStorage`), and a live
+`state` (`'idle'` | `'synthesizing'` | `'playing'`). A small pill appears
+bottom-right while synthesizing or playing; click it to stop. The last
+synthesized audio per text+voice is cached (10 entries).
 
 ## Development
 

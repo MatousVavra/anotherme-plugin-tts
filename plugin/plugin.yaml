@@ -1,5 +1,5 @@
 name: tts
-version: 0.1.0
+version: 0.2.0
 description: Text-to-speech via OpenAI-compatible provider
 author: AnotherMe
 entrypoint: plugin

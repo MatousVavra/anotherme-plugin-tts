@@ -1,0 +1,57 @@
+.tts-pill {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--elevated, #231f38);
+    border: 1px solid var(--border, rgba(196, 184, 224, 0.08));
+    border-radius: 999px;
+    padding: 10px 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text, #ebe4da);
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.15s;
+}
+
+.tts-pill:hover,
+.tts-pill:focus-visible {
+    border-color: var(--error, #d97d86);
+}
+
+.tts-pill-label {
+    white-space: nowrap;
+}
+
+.tts-pill-hint {
+    font-size: 11px;
+    color: var(--muted, #948fa8);
+    white-space: nowrap;
+}
+
+.tts-pill-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--muted, #948fa8);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: tts-pill-spin 0.8s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes tts-pill-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+    .tts-pill {
+        right: 12px;
+        bottom: 88px;
+    }
+}
